@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/django_modeltranslation" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_bench" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_contact" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_criterion_us_states" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_order_numbers" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_paypal" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_rest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/lfs_theme" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/portlets" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/src/reviews" vcs="Git" />
+  </component>
+</project>
+

@@ -36,6 +36,13 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en'
 
+gettext = lambda s: s
+LANGUAGES = (
+    ('en', gettext('English')),
+    ('de', gettext('German')),
+    ('pl', gettext('Polish')),
+)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -79,6 +86,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'localeurl.middleware.LocaleURLMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
     "pagination.middleware.PaginationMiddleware",
@@ -97,6 +105,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    "localeurl",
     "compressor",
     "django.contrib.admin",
     'django.contrib.auth',
@@ -157,6 +166,8 @@ INSTALLED_APPS = (
     "lfs_bench",
     "django_nose",
     "lfs_criterion_us_states",
+    "modeltranslation",
+
 )
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
@@ -310,6 +321,20 @@ LOGGING = {
         },
     }
 }
+
+
+# LOCALEURL settings
+PREFIX_DEFAULT_LOCALE = False
+
+LOCALE_INDEPENDENT_PATHS = (
+    r'^/manage/',
+    r'^/jsi18n/',
+    r'^/paypal/',
+    r'^/sitemap.xml$',
+)
+# /LOCALEURL settings
+
+LOCALEURL_USE_SESSION = True
 
 try:
     from local_settings import *

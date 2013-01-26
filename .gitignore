@@ -18,3 +18,4 @@ src/
 lfs_project/local_settings.py
 lfs_project/local_urls.py
 jmeter.log
+.idea/
