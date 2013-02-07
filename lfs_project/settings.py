@@ -322,6 +322,7 @@ LOGGING = {
     }
 }
 
+MODELTRANSLATION_FALLBACK_LANGUAGES = ('en', 'de', 'pl')
 
 # LOCALEURL settings
 PREFIX_DEFAULT_LOCALE = False
