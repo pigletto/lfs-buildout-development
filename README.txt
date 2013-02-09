@@ -1,9 +1,14 @@
 What is it?
 ===========
 
-This is the development buildout script for LFS. 
+This is the development buildout script for LFS with experimental (work in progress!) content translation support.
 
-It will create a complete developement evironment for LFS. 
+It will create a complete developement evironment for LFS using branches of lfs, lfs-theme that are modified to support
+content translations. By default this project is configured to use english as default language and german and polish as
+additional languages.
+
+The main difference beetween this version and original lfs-buildout-development is that this project uses
+django-modeltranslation and django-localeurl for translation support.
 
 LFS is an online shop based on Python, Django and jQuery.
 
@@ -31,18 +36,33 @@ How to use it?
 6. Sync your database
 
     $ bin/django syncdb
-    
-7. Initialize LFS
+
+7. Run translation migration scripts (it will create fields for translated versions of content -
+see django-modeltranslation for details)
+
+    $ bin/django sync_translation_fields
+    $ bin/django update_translation_fields
+
+8. Initialize LFS
 
     $ bin/django lfs_init
 
-8. Start server
+9. Start server
 
     $ bin/django runserver
     
-9. Browse to LFS
+10. Browse to LFS
 
     http://localhost:8000
+
+11. or for German version:
+
+    http://localhost:8000/de/
+
+12. or for Polish version:
+
+    http://localhost:8000/pl/
+
     
 More Information
 ================
