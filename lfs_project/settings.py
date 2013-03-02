@@ -107,6 +107,7 @@ TEMPLATE_DIRS = (
 INSTALLED_APPS = (
     "localeurl",
     "compressor",
+    "lfs_theme",
     "django.contrib.admin",
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -119,7 +120,6 @@ INSTALLED_APPS = (
     'django_countries',
     'django_extensions',
     'django_jenkins',
-    "lfs_theme",
     "pagination",
     'reviews',
     "tagging",
@@ -162,12 +162,11 @@ INSTALLED_APPS = (
     'paypal.standard.pdt',
     'gunicorn',
     'debug_toolbar',
-	'postal',
-    "lfs_bench",
-    "django_nose",
-    "lfs_criterion_us_states",
-    "modeltranslation",
-
+    'postal',
+    'lfs_bench',
+    'django_nose',
+    'lfs_criterion_us_states',
+    'modeltranslation',
 )
 
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'

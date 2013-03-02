@@ -18,6 +18,7 @@ urlpatterns += patterns("",
     (r'^reviews/', include('reviews.urls')),
     (r'^paypal/ipn/', include('paypal.standard.ipn.urls')),
     (r'^paypal/pdt/', include('paypal.standard.pdt.urls')),
+    (r'^localeurl/', include('localeurl.urls')),
 )
 
 urlpatterns += patterns("",
